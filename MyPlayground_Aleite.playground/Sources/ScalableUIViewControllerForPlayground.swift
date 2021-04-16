@@ -1,3 +1,8 @@
+//
+//  Created by Meyrillan Silva.
+//  Copyright © 2021 Meyrillan Silva. All rights reserved.
+//
+
 import UIKit
 
 public enum ScreenType {
@@ -61,7 +66,7 @@ extension UIViewController {
         if let contentSize = self.topViewController?.view.frame.size {
             self.view.frame.size = contentSize == .zero ? view.frame.size : contentSize
         } else {
-            print("Erro: Seu Navigation Controller não possui um View Controller")
+            print("Erro: The Navigation Controller doesn't have a View Controller")
         }
     }
     
