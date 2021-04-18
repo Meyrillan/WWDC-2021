@@ -36,7 +36,7 @@ public class FirstLevelViewController : UIViewController {
     
     let viewBgPopUp = UIImageView()
     let viewPopUp = UIImageView()
-    let buttonContinue = UIButton()
+    let buttonBack = UIButton()
     let labelCongratulations = UILabel()
     let labelYouDidIt = UILabel()
     
@@ -118,7 +118,7 @@ public class FirstLevelViewController : UIViewController {
         labelMissionTwo.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         labelMissionTwo.alpha = 0.5
         
-        labelMissionThree.frame = CGRect(x: 30, y: 225, width: 270, height: 40)
+        labelMissionThree.frame = CGRect(x: 30, y: 230, width: 270, height: 40)
         labelMissionThree.text = "Ask the manager to deliver milk to the mom"
         labelMissionThree.numberOfLines = 2
         labelMissionThree.font = sfRegular
@@ -234,7 +234,7 @@ public class FirstLevelViewController : UIViewController {
         view.addSubview(viewPopUp)
         view.addSubview(labelCongratulations)
         view.addSubview(labelYouDidIt)
-        view.addSubview(buttonContinue)
+        view.addSubview(buttonBack)
         
         self.view = view 
     }
@@ -242,7 +242,7 @@ public class FirstLevelViewController : UIViewController {
     public override func viewDidLoad() {
         buttonHome.addTarget(self, action: #selector(FirstLevelViewController.touchedButtonInicio), for: .touchUpInside)
         buttonDonate.addTarget(self, action: #selector(FirstLevelViewController.touchedButtonDoar), for: .touchUpInside)
-        buttonContinue.addTarget(self, action: #selector(FirstLevelViewController.touchedButtonContinuar), for: .touchUpInside)
+        buttonBack.addTarget(self, action: #selector(FirstLevelViewController.touchedButtonBack), for: .touchUpInside)
         
         viewSprite.presentScene(scene)
         scene.backgroundColor = .clear
@@ -359,12 +359,12 @@ public class FirstLevelViewController : UIViewController {
                 
     }
     
-    @IBAction public func touchedButtonContinuar() {
+    @IBAction public func touchedButtonBack() {
         viewBgPopUp.isHidden = true
         viewPopUp.isHidden = true
         labelCongratulations.isHidden = true
         labelYouDidIt.isHidden = true
-        buttonContinue.isHidden = true
+        buttonBack.isHidden = true
     }
     
     @objc func handleTapInFreezer(_ gesture: UIGestureRecognizer) {
@@ -458,11 +458,11 @@ public class FirstLevelViewController : UIViewController {
         labelYouDidIt.font = UIFont(name: "SFProRounded-Regular", size: 14)
         labelYouDidIt.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
-        buttonContinue.frame = CGRect(x: 638, y: 481, width: 165, height: 56)
-        buttonContinue.setTitle("Back", for: .normal)
-        buttonContinue.titleLabel?.font = sfBoldSmaller
-        buttonContinue.backgroundColor = #colorLiteral(red: 1, green: 0.4862745098, blue: 0.5294117647, alpha: 1)
-        buttonContinue.layer.cornerRadius = 14
+        buttonBack.frame = CGRect(x: 638, y: 481, width: 165, height: 56)
+        buttonBack.setTitle("Back", for: .normal)
+        buttonBack.titleLabel?.font = sfBoldSmaller
+        buttonBack.backgroundColor = #colorLiteral(red: 1, green: 0.4862745098, blue: 0.5294117647, alpha: 1)
+        buttonBack.layer.cornerRadius = 14
         
         labelHappyBaby.text = "1"
         
