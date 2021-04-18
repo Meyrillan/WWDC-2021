@@ -51,8 +51,8 @@ public class FirstLevelViewController : UIViewController {
     let sette = SKSpriteNode(imageNamed: "sofa@2x.png")
     let roomTable = SKSpriteNode(imageNamed: "centroSofa@2x.png")
     
-    let buttonStart = UIButton()
-    let imageStart = UIImage(named: "ButtonInicio@2x.png")
+    let buttonHome = UIButton()
+    let imageHome = UIImage(named: "ButtonInicio@2x.png")
     let viewMissions = UIImageView()
     let imageViewMissions = UIImage(named: "ViewMissoes@2x.png")
     let buttonDonate = UIButton()
@@ -89,43 +89,44 @@ public class FirstLevelViewController : UIViewController {
         let view = UIView()
         view.backgroundColor = #colorLiteral(red: 0.2117647059, green: 0, blue: 0.3764705882, alpha: 1)
         
-        buttonStart.frame = CGRect(x: 0, y:800, width: 100, height: 100)
-        buttonStart.setImage(imageStart, for: .normal)
+        buttonHome.frame = CGRect(x: 0, y:800, width: 100, height: 100)
+        buttonHome.setImage(imageHome, for: .normal)
         
         viewMissions.frame = CGRect(x: 0, y: 0, width: 314, height: 333)
         viewMissions.image = imageViewMissions
         
         labelMissions.frame = CGRect(x: 30, y: 36, width: 68, height: 21)
-        labelMissions.text = "Missões"
+        labelMissions.text = "Quests"
         labelMissions.font = sfBoldBigger
         labelMissions.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         labelMissionOne.frame = CGRect(x: 30, y: 73, width: 250, height: 16)
-        labelMissionOne.text = "Doe 1 frasco de leite para um hospital"
+        labelMissionOne.text = "Donate a milk bottle to the hospital"
         labelMissionOne.font = sfBoldSmaller
         labelMissionOne.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         buttonDonate.frame = CGRect(x: 58, y: 105, width: 165, height: 56)
-        buttonDonate.setTitle("Doar", for: .normal)
+        buttonDonate.setTitle("Donate", for: .normal)
         buttonDonate.titleLabel?.font = sfBoldSmaller
         buttonDonate.backgroundColor = #colorLiteral(red: 1, green: 0.4862745098, blue: 0.5294117647, alpha: 1)
         buttonDonate.layer.cornerRadius = 14
         
         labelMissionTwo.frame = CGRect(x: 30, y: 185, width: 270, height: 40)
-        labelMissionTwo.text = "Faça o entregador deixar o leite no freezer"
+        labelMissionTwo.text = "Ask the deliveryman to leave the milk \nbottle in the freezer"
+        labelMissionTwo.numberOfLines = 2
         labelMissionTwo.font = sfRegular
         labelMissionTwo.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         labelMissionTwo.alpha = 0.5
         
         labelMissionThree.frame = CGRect(x: 30, y: 225, width: 270, height: 40)
-        labelMissionThree.text = "Faça o administrador entregar o leite para \na mãe"
+        labelMissionThree.text = "Ask the manager to deliver milk to the mom"
         labelMissionThree.numberOfLines = 2
         labelMissionThree.font = sfRegular
         labelMissionThree.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         labelMissionThree.alpha = 0.5
         
         labelMissionFour.frame = CGRect(x: 30, y: 281, width: 190, height: 16)
-        labelMissionFour.text = "Faça a mãe alimentar o bebê"
+        labelMissionFour.text = "Ask the mom to feed the baby"
         labelMissionFour.font = sfRegular
         labelMissionFour.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         labelMissionFour.alpha = 0.5
@@ -136,8 +137,8 @@ public class FirstLevelViewController : UIViewController {
         viewScore.frame = CGRect(x: 403, y: 79.18, width: 70.96, height: 105.82)
         viewScore.image = imageScore
         
-        labelScore.frame = CGRect(x: 392, y: 36, width: 92, height: 21)
-        labelScore.text = "Pontuação"
+        labelScore.frame = CGRect(x: 411, y: 36, width: 92, height: 21)
+        labelScore.text = "Score"
         labelScore.font = sfBoldBigger
         labelScore.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
@@ -148,8 +149,8 @@ public class FirstLevelViewController : UIViewController {
         viewBabyReactions.frame = CGRect(x: 1204, y: 158, width: 68, height: 27)
         viewBabyReactions.image = imageBabyReactions
         
-        labelMom.frame = CGRect(x: 1211, y: 36, width: 35, height: 21)
-        labelMom.text = "Mãe"
+        labelMom.frame = CGRect(x: 1211, y: 36, width: 40, height: 21)
+        labelMom.text = "Mom"
         labelMom.font = sfRegularBigger
         labelMom.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
@@ -169,7 +170,7 @@ public class FirstLevelViewController : UIViewController {
         labelSadMom.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         labelBaby.frame = CGRect(x: 1211, y: 129, width: 154, height: 21)
-        labelBaby.text = "Bebês alimentados"
+        labelBaby.text = "Babies fed"
         labelBaby.font = sfRegularBigger
         labelBaby.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
@@ -207,7 +208,7 @@ public class FirstLevelViewController : UIViewController {
         view.addSubview(viewSprite)
         view.addSubview(viewFloor)
         view.addSubview(viewFreezer)
-        view.addSubview(buttonStart)
+        view.addSubview(buttonHome)
         view.addSubview(viewMissions)
         view.addSubview(labelMissions)
         view.addSubview(labelMissionOne)
@@ -239,7 +240,7 @@ public class FirstLevelViewController : UIViewController {
     }
     
     public override func viewDidLoad() {
-        buttonStart.addTarget(self, action: #selector(FirstLevelViewController.touchedButtonInicio), for: .touchUpInside)
+        buttonHome.addTarget(self, action: #selector(FirstLevelViewController.touchedButtonInicio), for: .touchUpInside)
         buttonDonate.addTarget(self, action: #selector(FirstLevelViewController.touchedButtonDoar), for: .touchUpInside)
         buttonContinue.addTarget(self, action: #selector(FirstLevelViewController.touchedButtonContinuar), for: .touchUpInside)
         
@@ -446,19 +447,19 @@ public class FirstLevelViewController : UIViewController {
         viewPopUp.image = UIImage(named: "PopUp@2x.png")
         
         labelCongratulations.frame = CGRect(x: 638, y: 363, width: 180, height: 50)
-        labelCongratulations.text = "Parabéns!"
+        labelCongratulations.text = "Awesome!"
         labelCongratulations.font = UIFont(name: "SFProRounded-Bold", size: 36)
         labelCongratulations.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             
         labelYouDidIt.frame = CGRect(x: 590, y: 407, width: 260, height: 70)
-        labelYouDidIt.text = "Você conseguiu terminar as missões! \n Continue a ajudar as mamães."
+        labelYouDidIt.text = "You managed to finish the quests!\n Thank you for helping!"
         labelYouDidIt.numberOfLines = 2
         labelYouDidIt.textAlignment = NSTextAlignment.center
         labelYouDidIt.font = UIFont(name: "SFProRounded-Regular", size: 14)
         labelYouDidIt.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         buttonContinue.frame = CGRect(x: 638, y: 481, width: 165, height: 56)
-        buttonContinue.setTitle("Continuar", for: .normal)
+        buttonContinue.setTitle("Back", for: .normal)
         buttonContinue.titleLabel?.font = sfBoldSmaller
         buttonContinue.backgroundColor = #colorLiteral(red: 1, green: 0.4862745098, blue: 0.5294117647, alpha: 1)
         buttonContinue.layer.cornerRadius = 14
