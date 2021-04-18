@@ -18,7 +18,7 @@ let cfURLRegular = Bundle.main.url(forResource: "SF-Pro-Rounded-Regular", withEx
 CTFontManagerRegisterFontsForURL(cfURLRegular, CTFontManagerScope.process, nil)
 
 let sfBoldBigger = UIFont(name: "SFProRounded-Bold", size: 18)
-let sfBoldSmaller = UIFont(name: "SFProRounded-Bold", size: 14)
+let sfBoldSmaller = UIFont(name: "SFProRounded-Bold", size: 16)
 let sfRegularBigger = UIFont(name: "SFProRounded-Regular", size: 18)
 let sfRegular = UIFont(name: "SFProRounded-Regular", size: 20)
 
@@ -75,19 +75,19 @@ class MyViewController : UIViewController {
         
         buttonAudio.setImage(imageWithAudio, for: .normal)
         
-        momView.frame = CGRect(x: 940, y: 380, width: 101, height: 230)
+        momView.frame = CGRect(x: 937, y: 397, width: 101, height: 230)
         momView.image = UIImage(named: "Mãe@2x.png")
         
-        babyView.frame = CGRect(x: 960, y: 455, width: 47, height: 76)
+        babyView.frame = CGRect(x: 953, y: 478, width: 47, height: 76)
         babyView.image = UIImage(named: "Bebê@2x.png")
         
-        setteView.frame = CGRect(x: 770, y: 276.51, width: 570, height: 443)
+        setteView.frame = CGRect(x: 770, y: 302, width: 570, height: 443)
         setteView.image = UIImage(named: "sofa@2x.png")
 
         logoView.frame = CGRect(x: 100, y: 130, width: 529.8, height: 188.3)
         logoView.image = UIImage(named: "logo.png")
         
-        lableStory.frame = CGRect(x: 100, y: 400, width: 570, height: 300)
+        lableStory.frame = CGRect(x: 100, y: 400, width: 555, height: 300)
         lableStory.numberOfLines = 12
         lableStory.font = sfRegular
         lableStory.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
@@ -144,7 +144,7 @@ class MyViewController : UIViewController {
         viewPopUp.frame = CGRect(x: 0, y: 0, width: 1440, height: 900)
         viewPopUp.backgroundColor = #colorLiteral(red: 0.2117647059, green: 0, blue: 0.3764705882, alpha: 1)
         
-        buttonStart.frame = CGRect(x: 630, y: 750, width: 145, height: 56)
+        buttonStart.frame = CGRect(x: 640, y: 740, width: 115, height: 56)
         buttonStart.setTitle("Start", for: .normal)
         buttonStart.titleLabel?.font = sfBoldSmaller
         buttonStart.backgroundColor = #colorLiteral(red: 1, green: 0.4862745098, blue: 0.5294117647, alpha: 1)
@@ -156,18 +156,18 @@ class MyViewController : UIViewController {
         buttonBack.backgroundColor = #colorLiteral(red: 1, green: 0.4862745098, blue: 0.5294117647, alpha: 1)
         buttonBack.layer.cornerRadius = 14
         
-        lableStory.text = "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+        lableStory.text = "This is Marluce, but everybody calls her Luce. The last month \nhasn’t been easy for her because every mom’s desire is to see her baby strong and healthy, but unfortunately she can’t feed him \nalone because her body doesn’t produce enough milk to \nbreastfeeding. Because of that, Luce went to the human milk bank that is in a maternity ward. To help her feed her child, you need to click on objects or characters in the maternity hospital according to each quest. Good luck and I hope you can do that, Luce will be very happy."
         
         lableCredits.frame = CGRect(x: 658, y: 313, width: 180, height: 50)
         lableCredits.text = "Credits"
         lableCredits.font = UIFont(name: "SFProRounded-Bold", size: 36)
         lableCredits.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
             
-        lablePeople.frame = CGRect(x: 540, y: 400, width: 360, height: 70)
-        lablePeople.text = "You managed to finish the quests!\n Thank you for helping!"
-        lablePeople.numberOfLines = 4
+        lablePeople.frame = CGRect(x: 540, y: 400, width: 360, height: 130)
+        lablePeople.text = "Ideation, design and development by Meyrillan Souza. \nInstagram: @mey_souza \n\nThe song We Start the Cure in Paris by Chris Zabriskie and Marc Sirdoreus is licensed under a Creative Commons Attribution License."
+        lablePeople.numberOfLines = 7
         lablePeople.textAlignment = NSTextAlignment.center
-        lablePeople.font = UIFont(name: "SFProRounded-Regular", size: 14)
+        lablePeople.font = UIFont(name: "SFProRounded-Regular", size: 16)
         lablePeople.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     }
     
@@ -246,5 +246,5 @@ let firstLevelVC = FirstLevelViewController(screenType: .mac, isPortrait: true)
 let navigation = UINavigationController(screenType: .mac, isPortrait: true)
 navigation.navigationBar.isHidden = true
 navigation.pushViewController(vc, animated: true)
-PlaygroundPage.current.liveView = navigation.scale(to: 0.5)
+PlaygroundPage.current.liveView = navigation.scale(to: 0.536)
 

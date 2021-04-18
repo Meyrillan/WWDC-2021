@@ -155,7 +155,7 @@ public class FirstLevelViewController : UIViewController {
         labelMom.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         labelHappyMom.frame = CGRect(x: 1241, y: 68, width: 11, height: 21)
-        labelHappyMom.text = "1"
+        labelHappyMom.text = "0"
         labelHappyMom.font = sfRegularBigger
         labelHappyMom.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
@@ -165,7 +165,7 @@ public class FirstLevelViewController : UIViewController {
         labelBoredMom.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         labelSadMom.frame = CGRect(x: 1382, y: 68, width: 11, height: 21)
-        labelSadMom.text = "0"
+        labelSadMom.text = "1"
         labelSadMom.font = sfRegularBigger
         labelSadMom.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
@@ -378,7 +378,7 @@ public class FirstLevelViewController : UIViewController {
         labelMissionThree.alpha = 1
         labelMissionThree.font = sfBoldSmaller
         
-        labelHappyMom.text = "0"
+        labelSadMom.text = "0"
         labelBoredMom.text = "1"
         
         if deliveryman.position == scene.convertPoint(fromView: CGPoint(x: 713, y: 320)) {
@@ -455,7 +455,7 @@ public class FirstLevelViewController : UIViewController {
         labelYouDidIt.text = "You managed to finish the quests!\n Thank you for helping!"
         labelYouDidIt.numberOfLines = 2
         labelYouDidIt.textAlignment = NSTextAlignment.center
-        labelYouDidIt.font = UIFont(name: "SFProRounded-Regular", size: 14)
+        labelYouDidIt.font = UIFont(name: "SFProRounded-Regular", size: 16)
         labelYouDidIt.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         
         buttonBack.frame = CGRect(x: 638, y: 481, width: 165, height: 56)

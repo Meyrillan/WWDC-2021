@@ -17,5 +17,5 @@ CTFontManagerRegisterFontsForURL(cfURLRegular, CTFontManagerScope.process, nil)
 
 // Present the view controller in the Live View window
 let vcFirstLevel = FirstLevelViewController(screenType: .mac, isPortrait: true)
-PlaygroundPage.current.liveView = vcFirstLevel.scale(to: 0.5)
+PlaygroundPage.current.liveView = vcFirstLevel.scale(to: 0.536)
 PlaygroundPage.current.needsIndefiniteExecution = true
